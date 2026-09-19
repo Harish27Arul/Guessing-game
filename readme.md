@@ -11,13 +11,21 @@ The user enters a number and clicks the **Check** button. The game provides feed
 * **Too High** – The guessed number is greater than the random number.
 * **Too Low** – The guessed number is less than the random number.
 * **Correct** – The guessed number matches the random number.
-* **Invalid Input** – If the input is empty.
+* **Invalid Input** – If the input is empty or invalid.
 * **Out of Range** – If the entered number is not between 1 and 100.
 
-How It Works
+## Technologies Used
+
+* HTML
+* CSS
+* Bootstrap
+* JavaScript
+
+## How It Works
 
 The basic game logic follows this flow:
 
+```text
 User enters number
         ↓
    parseInt()
@@ -33,24 +41,31 @@ Invalid    Compare
      High   Low   Equal
        ↓     ↓     ↓
   Too High Too Low Correct
+```
 
-## Technologies Used
+### Input Validation
 
-* HTML
-* CSS
-* Bootstrap
-* JavaScript
+If the user leaves the input empty or provides an invalid input:
 
-## How It Works
+```text
+User enters invalid/empty input
+             ↓
+       Provide a Valid
+        user input.
+```
 
-1. A random number between 1 and 100 is generated using JavaScript.
-2. The user enters a number in the input field.
-3. When the **Check** button is clicked, JavaScript gets the user's input.
-4. The input is converted into a number and validated.
-5. If the input is empty or invalid, a message asking the user to provide a valid input is displayed.
-6. If the number is outside the range of 1 to 100, the user is asked to enter a number within the valid range.
-7. If the input is valid, it is compared with the randomly generated number.
-8. A suitable result message is displayed.
+If the entered number is outside the range of 1 to 100:
+
+```text
+User enters number
+        ↓
+   Is it 1–100?
+        ↓
+       No
+        ↓
+Please enter number
+only from 1 to 100
+```
 
 ## Features
 
